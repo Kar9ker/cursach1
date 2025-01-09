@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Med kit</string>
     <string name="create_acc">Создать аккаунт</string>
     <string name="no_acc">Нет аккаунта?</string>
     <string name="sign_in">Войти</string>
