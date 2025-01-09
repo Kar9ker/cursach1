@@ -60,10 +60,10 @@ class CreateAccount : AppCompatActivity() {
                             withContext(Dispatchers.Main) {
                                 val createAccIntent = Intent(
                                     this@CreateAccount,
-                                    HomeActivity::class.java
+                                    MainActivity::class.java
                                 )
                                 startActivity(createAccIntent)
-                                finish()
+                                //finish()
                             }
                         }
 

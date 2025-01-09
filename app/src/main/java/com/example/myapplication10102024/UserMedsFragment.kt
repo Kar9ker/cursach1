@@ -28,7 +28,7 @@ class UserMedsFragment : Fragment()  {
         // Константа для ключа (используется для извлечения данных из Bundle)
         private const val ARG_STRING = "arg_string"
 
-        // Фабричный метод для создания нового экземпляра фрагмента с данными
+        // метод для создания нового экземпляра фрагмента с данными
         fun newInstance(data: String): UserMedsFragment {
             val fragment = UserMedsFragment()
             val args = Bundle()
@@ -61,9 +61,7 @@ class UserMedsFragment : Fragment()  {
         sharedViewModel.selectedMedicine.observe(viewLifecycleOwner) { medicine ->
             if (medicine != null) {
                 Toast.makeText(requireContext(), "Передано лекарство: ${medicine.name}", Toast.LENGTH_SHORT).show()
-                // Выполните действия с полученной медициной
                 selectedMedicine = medicine
-                // Очистите выбранное лекарство, если нужно
                 sharedViewModel.clearSelectedMedicine()
             }
         }
