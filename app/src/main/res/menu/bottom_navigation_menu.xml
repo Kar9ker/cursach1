@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_medicine"
+        android:enabled="true"
+        android:icon="@drawable/medicine"
+        android:title="Препараты"/>
+    <item
+        android:id="@+id/nav_user_meds"
+        android:enabled="true"
+        android:icon="@drawable/med_kit"
+        android:title="Аптечка"/>
+</menu>

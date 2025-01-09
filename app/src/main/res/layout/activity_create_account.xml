@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccount"
+    android:background="@color/pale_blue_background"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="25dp">
+
+    <LinearLayout
+        android:id="@+id/layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_pass"
+        app:layout_constraintVertical_chainStyle="spread_inside">
+
+        <TextView
+            android:id="@+id/text_view_create_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:text="@string/create_name"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/edittext_create_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_background"
+            android:paddingStart="50dp"
+            android:textSize="24sp"
+            android:hint="@string/enter_name_hint"
+            android:layout_marginTop="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout_name"
+        app:layout_constraintBottom_toTopOf="@id/layout_confirm_pass">
+
+        <TextView
+            android:id="@+id/text_view_create_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:text="Ваш пароль"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:layout_marginTop="25dp" />
+
+        <EditText
+            android:id="@+id/edittext_create_pass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_background"
+            android:paddingStart="50dp"
+            android:textSize="24sp"
+            android:hint="Введите Ваш пароль"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_confirm_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout_pass"
+        app:layout_constraintBottom_toTopOf="@id/layout_buttons">
+        <TextView
+            android:id="@+id/text_view_confirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caviar_dreams_bold"
+            android:text="Подтверждение пароля"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:id="@+id/edittext_confirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_background"
+            android:paddingStart="50dp"
+            android:textSize="24sp"
+            android:hint="Подтвердите Ваш пароль"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_confirm_pass">
+
+        <TextView
+            android:id="@+id/text_view_create_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:textSize="25sp"
+            android:textColor="@color/pale_gray_text"
+            android:fontFamily="@font/caviar_dreams_family"
+            android:textFontWeight="@integer/material_motion_duration_medium_1"
+            android:text="Назад"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_blue_text"
+            android:textSize="28sp"
+            android:fontFamily="@font/caviar_dreams_family"
+            android:text="Регистрация"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
